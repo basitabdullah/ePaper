@@ -1,0 +1,179 @@
+@import "../../styles/var.scss";
+
+.viewer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+
+  .viewer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $background;
+    color: $text-color;
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+
+    .viewer-nav-logo {
+      height: 35px;
+      width: 35px;
+    }
+    .nav-left {
+      flex: 1;
+    }
+
+    .nav-center {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      hr {
+        color: gray;
+        height: 20px;
+      }
+      .viewer-nav-issue {
+        font-weight: 300;
+      }
+    }
+
+    .nav-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      a {
+        font-size: 15px;
+        color: $white;
+      }
+      .avatar {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 30px;
+        }
+      }
+
+      .search-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $white;
+        color: $black;
+        padding: 5px 8px;
+        border-radius: 20px;
+        max-width: 130px;
+
+        input {
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          color: $black;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .view {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .branding {
+      font-size: 22px;
+      color: $white;
+      font-weight: bold;
+      width: 550px;
+      text-align: center;
+      padding: 10px;
+      height: 70vh;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 18px;
+        font-style: italic;
+      }
+    }
+    .slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      width: 720px !important;
+
+      img {
+        height: 75vh;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      &.single {
+        width: 340px !important;
+      }
+    }
+  }
+
+  .lower-nav {
+    display: flex;
+    background-color: $background;
+    align-items: center;
+    padding: 10px;
+    color: $white;
+    .view-changer {
+      flex: 1;
+      .toggle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #3a3a3a;
+
+        width: 110px;
+        justify-content: space-around;
+        border-radius: 15px;
+
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px 15px;
+          border-radius: 15px;
+          svg {
+            font-size: 20px;
+          }
+
+          &.active {
+            background-color: rgb(133, 133, 133);
+          }
+        }
+      }
+    }
+    .pages {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex: 2;
+
+      .page {
+        padding: 10px;
+        cursor: pointer;
+        &.active {
+          background-color: rgb(91, 91, 114);
+        }
+      }
+    }
+  }
+}
